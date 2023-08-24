@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
     <router-outlet></router-outlet>
     `
 })
-export class AppComponent { }
 
 //import { FormsModule } from '@angular/forms';
 @Component({
