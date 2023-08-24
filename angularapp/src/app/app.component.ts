@@ -1,4 +1,13 @@
-import
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'prefix-app',
+  template: `
+    <router-outlet></router-outlet>
+    `
+})
+export class AppComponent { }
+
 //import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-root',
