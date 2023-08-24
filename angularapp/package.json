@@ -9,5 +9,10 @@
     "@angular/common": "^16.2.2",
     "@angular/core": "^16.2.2",
     "ngx-bootstrap": "^5.6.1"
+  },
+  "scripts": {
+    "start": "ng serve"
   }
 }
+
+
