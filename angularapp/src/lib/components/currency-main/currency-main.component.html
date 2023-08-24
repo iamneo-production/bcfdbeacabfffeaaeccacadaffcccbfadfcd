@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="conversionBlock">
+    <form class="form-inline" role="form" [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)">
+      <div class="form-group">
+        <label for="amount">Amount:&nbsp;</label>
+        <input type="number" formControlName="amount" placeholder="Enter Amount">
+      </div>
+      &nbsp;&nbsp;
+      <div class="form-group">
+        <label for="base">Base Currency:&nbsp;</label>
+        <select formControlName="countryRates">
+          <option [ngValue]="null" disabled>-- Select base currency --</option>
+          <option *ngFor="let option of currencyRates;let i = index" [ngValue]="option">{{option.country}}</option>
+        </select>
+      </div>
+      &nbsp;&nbsp;
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary" style="padding-left: 15px;padding-right: 15px;">Convert</button>
+      </div>
+    </form>
+  </div>
+  <div class="currencyTable">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Country</th>
+          <th scope="col">Country Currency Code</th>
+          <th scope="col">Base Rate</th>
+          <th scope="col">Converted Rate</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let data of convertedRates; let i = index">
+        <tr>
+          <th scope="row">{{i + 1}}</th>
+          <td>{{data.countryName}}</td>
+          <td>{{data.countryCode}}</td>
+          <td>{{data.baseCountryRate}}</td>
+          <td><span>{{data.convertedCountryRate | currency:data.countryCode:'symbol':'4.2-2' }}</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -6,8 +6,8 @@
   },
   "license": "MIT",
   "peerDependencies": {
-    "@angular/common": "^7.2.0",
-    "@angular/core": "^7.2.0",
+    "@angular/common": "^16.2.2",
+    "@angular/core": "^16.2.2",
     "ngx-bootstrap": "^5.6.1"
   }
 }
